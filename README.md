@@ -1,2 +1,4 @@
 # adoptme
-API project with cat data pulled from thecatapi.com
+The app uses cat data from thecatapi.com
+
+
