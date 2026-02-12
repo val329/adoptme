@@ -1,55 +1,44 @@
-const URL = `https://api.thecatapi.com/v1/images/search?limit=5`;
+const URL = `https://api.thecatapi.com/v1/images/search`;
 const API_KEY = "DEMO-API-KEY";
 
-fetch(URL,{headers: {
-    'x-api-key': API_KEY
-    }})
+fetch(URL, {
+    headers: {
+        "Content-Type": "application/json",
+        'x-api-key': API_KEY,
+    },
+})
 
-    .then((response) => {
-        return response.json();
-    })
+.then((response) => {
+    return response.json();
+})
 
-    .then((data) => {
-        let imagesData = data;
-        imagesData.map(function(imageData) {
+.then((data) => {
+    let imagesData = data;
+    imagesData.map(function(imageData) {
 
-            let image = document.createElement('img');
-            //use the url from the image object
-            image.src = `${imageData.url}`;
-            // image.width = `${imageData.width}`;
-            // image.height = `${imageData.height}`;
+        let image = document.createElement('img');
+        let petname = document.createElement('span');
 
+        image.src = `${imageData.url}`;
+        
+        if (imageData.categories != null) {
+            petname.textContent = `${imageData.categories[0].name.charAt(0).toUpperCase() + imageData.categories[0].name.slice(1)}`;
+        } else {
+            petname.textContent = `Oops, I don't have a name yet`;
+        }
+        
+        document.querySelector('.imageContainer').appendChild(image);
+        document.querySelector('#petname').appendChild(petname);
 
-            
-            // show_image(image.src,image.width,image.height);  
-            document.querySelector('.imageContainer').appendChild(image);  
-            // document.querySelector('.breed').textContent = imageData.breeds[0].name;
-            // document.getElementById('breed').Value = imageData.breeds[0].name;
-            // document.getElementById('breed').textContent = imageData.breeds[0].name;
-            document.getElementById('breed').textContent = 'Breed'
-
-
+        //Add on click event listener for button
+        const btn_petname = document.getElementById('btn_petname');
+        btn_petname.addEventListener('click', function () {
+            document.getElementById('petname').hidden = false;
         })
-
     })
+})
 
 
-    .catch(function(error) {
-        console.log(error);
-    });
-
-    
-// function show_image(src, width, height) {
-//     // Create a new image element
-//     let img = document.createElement("img");
-
-//     // Set the source, width, height attributes
-//     img.src = src;
-//     img.width = width;
-//     img.height = height;
-
-//     // Append the image element to the image container
-//     // document.body.appendChild(img);
-//     document.querySelector('.imageContainer').appendChild(img);
-//     // document.getElementById("imageContainer").appendChild(img);
-// };
+.catch(function(error) {
+    console.log(error);
+});
