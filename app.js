@@ -23,7 +23,7 @@ fetch(URL,{headers: {
             
             // show_image(image.src,image.width,image.height);  
             document.querySelector('.imageContainer').appendChild(image);  
-            document.querySelector('demo').textContent = imageData.breeds[0].name;
+            document.querySelector('breed').textContent = imageData.breeds[0].name;
 
         })
 
