@@ -16,14 +16,17 @@ fetch(URL,{headers: {
             let image = document.createElement('img');
             //use the url from the image object
             image.src = `${imageData.url}`;
-            image.width = `${imageData.width}`;
-            image.height = `${imageData.height}`;
+            // image.width = `${imageData.width}`;
+            // image.height = `${imageData.height}`;
 
 
             
             // show_image(image.src,image.width,image.height);  
             document.querySelector('.imageContainer').appendChild(image);  
-            document.querySelector('.breed').textContent = imageData.breeds[0].name;
+            // document.querySelector('.breed').textContent = imageData.breeds[0].name;
+            // document.getElementById('breed').Value = imageData.breeds[0].name;
+            document.getElementById('breed').textContent = imageData.breeds[0].name;
+
 
         })
 
