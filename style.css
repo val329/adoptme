@@ -21,9 +21,16 @@ button {
   border-radius:4px;
 }
 .container {
-  max-width: 500px;
+  max-width: 900px;
   margin: 60px auto;
   background: white;
   padding: 24px;
   border-radius: 6px;
+}
+
+.imageContainer {
+  max-width: 850px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
