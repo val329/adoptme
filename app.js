@@ -1,4 +1,4 @@
-const URL = `https://api.thecatapi.com/v1/images/search?limit=1`;
+const URL = `https://api.thecatapi.com/v1/images/search?limit=5`;
 const API_KEY = "DEMO-API-KEY";
 
 fetch(URL,{headers: {
@@ -25,7 +25,8 @@ fetch(URL,{headers: {
             document.querySelector('.imageContainer').appendChild(image);  
             // document.querySelector('.breed').textContent = imageData.breeds[0].name;
             // document.getElementById('breed').Value = imageData.breeds[0].name;
-            document.getElementById('breed').textContent = imageData.breeds[0].name;
+            // document.getElementById('breed').textContent = imageData.breeds[0].name;
+            document.getElementById('breed').textContent = 'Breed'
 
 
         })
