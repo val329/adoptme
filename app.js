@@ -18,9 +18,12 @@ fetch(URL,{headers: {
             image.src = `${imageData.url}`;
             image.width = `${imageData.width}`;
             image.height = `${imageData.height}`;
+
+
             
             // show_image(image.src,image.width,image.height);  
             document.querySelector('.imageContainer').appendChild(image);  
+            document.querySelector('demo').textContent = imageData.breeds[0].name;
 
         })
 
