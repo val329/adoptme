@@ -6,12 +6,16 @@
 <link rel="stylesheet" href="style.css">
 <script src="app.js"></script>
 <body>
-<div class="container"> 
-<h1>Adopt me!</h1>
-<div class="imageContainer"></div>
-<p>Hi, my name is <span id="petname"></span>, I'm a <span id="breed"></span>, 
-    and I'm looking for a new home</p>
-<button onclick="window.location.reload()">Next</button>
-</div>
+    <div class="container">
+        <h1>Adopt me!</h1>
+        <div class="imageContainer"></div>
+        <p>Hi, nice to meet you!</p>
+        <button id="btn_petname">Want to know my name?</button>
+        <span id="petname" hidden=1></span>
+        <p>I'm looking for a new home. You can add me to favorites
+            to keep track of me, or check out my siblings by clicking the button below</p>
+        <button id="btn_favorite">♥️</button>
+        <button onclick="window.location.reload()">Next</button>
+    </div>
 </body>
 </html>
