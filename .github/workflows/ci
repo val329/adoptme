@@ -37,7 +37,7 @@ jobs:
   
       - name: Add Environment Variables
         env:
-          NEXT_PUBLIC_FIREBASE_API_KEY: ${{ secrets.NEXT_PUBLIC_FIREBASE_API_KEY }}
+          cat_api_key: ${{ secrets.cat_api_key }}
         run: echo "Environment variables configured."
 
       - name: Install Dependencies
