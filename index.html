@@ -4,7 +4,7 @@
 <title>Adopt me!</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="style.css">
-<script src="app.js"></script>
+<script src="index.js"></script>
 <body>
     <div class="container">
         <h1>Adopt me!</h1>
@@ -12,9 +12,10 @@
         <p>Hi, nice to meet you!</p>
         <button id="btn_petname">Want to know my name?</button>
         <span id="petname" hidden=1></span>
-        <p>I'm looking for a new home. You can add me to favorites
-            to keep track of me, or check out my siblings by clicking the button below</p>
-        <button id="btn_favorite">♥️</button>
+        <p>I'm a <span id="breed"></span> and I'm looking for a new home. What humans say about me: <br><br>
+        <span id="facts"></span></p>
+        <p>You can add me to favorites to keep track of me, or check out my siblings by clicking the buttons below</p>
+        <button id="btn_fav">♥️</button>
         <button onclick="window.location.reload()">Next</button>
     </div>
 </body>
