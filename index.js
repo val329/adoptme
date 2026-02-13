@@ -1,7 +1,7 @@
 const IMAGE_URL = `https://api.thecatapi.com/v1/images/search?has_breeds=1`;
 const FAV_URL = `https://api.thecatapi.com/v1/favourites`;
 
-require('dotenv').config();
+// require('dotenv').config();
 const API_KEY = process.env.cat_api_key
 
 fetchImage()
